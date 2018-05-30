@@ -5,9 +5,9 @@ from pubnub.pubnub import PubNub
  
 pnconfig = PNConfiguration()
  
-pnconfig.subscribe_key = 'sub-c-a1ad7926-5e0a-11e8-8ebf-f686a6d93a6b'
-pnconfig.publish_key = 'pub-c-563cbabc-a399-4a76-830a-468a698efd4d'
-pnconfig.secret_key = 'sec-c-MzAwZGRhMmUtZjEyNC00MzZjLWE3NmMtYjhhNDlmMGJjOWI0'
+pnconfig.subscribe_key = 'Enter your subscribe key here'
+pnconfig.publish_key = 'Enter your publish key here'
+pnconfig.secret_key = 'Enter your secret key here'
  
 pubnub = PubNub(pnconfig)
  
@@ -28,7 +28,6 @@ class MySubscribeCallback(SubscribeCallback):
             pass
         if status.category == PNStatusCategory.PNConnectedCategory:
             pubnub.grant().read(True).write(True).channels('RP').auth_keys('Valid_key').ttl(2).sync()
-            # pubnub.publish().channel('test').message("hello").async(my_publish_callback)
         if status.category == PNStatusCategory.PNReconnectedCategory:
             pass
         if status.category == PNStatusCategory.PNDecryptionErrorCategory:
@@ -39,4 +38,4 @@ class MySubscribeCallback(SubscribeCallback):
  
  
 pubnub.add_listener(MySubscribeCallback())
-pubnub.subscribe().channels('Rasp').execute()
+pubnub.subscribe().channels('RP').execute()
