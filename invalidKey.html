@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=620" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      .wrapper {
+        text-align: center;
+      }
+
+      .btn {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+      }
+
+      #lockImage {
+        position: absolute;
+        top: 10%;
+        left: 44%;
+      }
+
+      .warning {
+        font-size: 24px;
+        color: #FFFFFF;
+        background-color: #f44242;
+      }
+    </style>
+    <title>Invalid Key to Smart Lock</title> 
+    <!-- PubNub JavaScript SDK -->
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.1.js"></script>
+    <script type="text/javascript" src="invalidKey.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="warning" style="display: none;"><p>Access Denied!</p></div>
+      <img id="lockImage" src="lock.png" alt="Locked"/>
+      <button class="btn btn-danger" onclick="unlock()">UNLOCK</button>
+     <!--   -->
+    </div>
+  </body>
+</html>
