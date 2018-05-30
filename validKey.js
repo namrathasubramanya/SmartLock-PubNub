@@ -15,8 +15,6 @@ function (status, response) {
 		for (var i = 0;i < elems.length;i += 1){
   			elems[i].style.display = 'block';
 		}
-		document.getElementsByClassName("btn").value = "Try Again";
-        // handle error
         console.log(status);
     } else {
     	document.getElementById('lockImage').src = 'Unlock.png';
