@@ -1,7 +1,7 @@
  var pubnub = new PubNub({
-    subscribeKey: 'sub-c-a1ad7926-5e0a-11e8-8ebf-f686a6d93a6b',
-    publishKey: 'pub-c-563cbabc-a399-4a76-830a-468a698efd4d',
-    secretKey: 'sec-c-MzAwZGRhMmUtZjEyNC00MzZjLWE3NmMtYjhhNDlmMGJjOWI0'
+    subscribeKey: 'ENTER_YOUR_SUBSCRIBE_KEY',
+    publishKey: 'ENTER_YOUR_PUBLISH_KEY',
+    secretKey: 'ENTER_YOUR_SECRET_KEY'
 });
 
 pubnub.grant(
